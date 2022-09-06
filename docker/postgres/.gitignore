@@ -1,0 +1,7 @@
+archived-data/
+backups/
+data/
+init/
+scripts/local/
+
+*.tar

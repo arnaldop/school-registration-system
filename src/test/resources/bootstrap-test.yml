@@ -1,0 +1,9 @@
+# Testcontainers
+embedded:
+  postgresql:
+    dockerImage: postgres:14-alpine
+    database: school-registration-system
+    user: registrar
+    password: registrar123
+    wait-timout-in-seconds: 60
+    reuseContainer: true

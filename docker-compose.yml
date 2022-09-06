@@ -1,0 +1,22 @@
+version: '3.1'
+
+services:
+  school-registration-system:
+    container_name: school-registration-system
+    build: .
+    ports:
+      - "8093:8093"
+    volumes:
+      - /tmp/school-registration-system/:/var/log/school-registration-system/:rw
+#    healthcheck:
+#      test: "java -cp BOOT-INF/classes agency.comp.util.HealthChecker"
+#      interval: 20s
+#      timeout: 5s
+#      retries: 5
+    restart: unless-stopped
+#    networks:
+#      agency-comp:
+
+#networks:
+#  agency-comp:
+#    external: true

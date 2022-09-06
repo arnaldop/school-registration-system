@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+  school-registration-db:
+    ports:
+      - "5432:5432"
+    volumes:
+      - /root/postgres/data/13/data:/var/lib/postgresql/data:rw
+      - /root/postgres/init:/docker-entrypoint-initdb.d
+    networks:
+      school-registration:
+    restart: unless-stopped
+
+networks:
+  school-registration:
+    external: true
